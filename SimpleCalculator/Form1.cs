@@ -70,6 +70,7 @@ namespace SimpleCalculator
 
         private void equal_click(object sender, EventArgs e)
         {
+            equation.Show();
             equation.Text = "";
             switch (operation)
             {
@@ -101,6 +102,19 @@ namespace SimpleCalculator
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)Keys.NumPad0)
+            {
+                MessageBox.Show("Working");
+            }
         }
     }
 }
